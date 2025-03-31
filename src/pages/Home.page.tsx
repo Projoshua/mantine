@@ -8,54 +8,6 @@ import { DoubleNavbar } from '@/components/DoubleNavBar/DoubleNavBar';
 import { Container, Skeleton } from '@mantine/core';
 
 const PRIMARY_COL_HEIGHT = '300px';
-
-export function LeadGrid() {
-  const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
-
-  return (
-    <Container my="md" style={{width:"100vw"}} fluid>
-      <SimpleGrid 
-        cols={{ base: 1, sm: 2 }} // 3-column layout on desktop
-        spacing="md"
-      >
-        {/* Left item - takes 1/3 width */}
-        <Grid
-        
-        >
-          <Grid.Col>
-          <DoubleNavbar 
-         gutter="md" 
-         span={1} // Takes remaining 2/3
-         style={{   display: 'flex', flexDirection: 'column' }}
-         />
-
-          </Grid.Col>
-        </Grid>
-        
-
-        {/* Right grid - takes 2/3 width */}
-        <Grid 
-          gutter="md" 
-          span={2} // Takes remaining 2/3
-          style={{  display: 'flex', flexDirection: 'column' }}
-        >
-          <Grid.Col>
-          <Welcome 
-          
-           />
-          <ColorSchemeToggle
-           />
-           <TableReviews 
-           
-          />
-          </Grid.Col>
-          
-          
-        </Grid>
-      </SimpleGrid>
-    </Container>
-  );
-}
 //import { Grid } from '@mantine/core';
 
 function TwoColumnLayout() {
